@@ -8,10 +8,12 @@ import 'package:web_components/web_components.dart';
 class FirstComponent extends PolymerElement {
 
   @property
-  String _component;
+  String component;
 
   ready() {
     component = 'component1';
+    set('component', component);
+    set('first-component', component);
     print('component is $component');
     print('firstComponent ready');
   }
@@ -26,11 +28,4 @@ class FirstComponent extends PolymerElement {
     print('firstComponent created');
   }
 
-  void set component(String component) {
-    _component = component;
-  }
-
-  String get component {
-    return _component;
-  }
 }
