@@ -1,0 +1,7 @@
+<link rel="import" href="../second_component/second_component.html">
+<dom-module id="first-component">
+    <template>
+        <div>{{component}}</div>
+        <second-component first-component="{{component}}"></second-component>
+    </template>
+</dom-module>
