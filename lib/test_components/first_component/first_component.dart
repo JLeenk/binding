@@ -8,23 +8,36 @@ import 'package:web_components/web_components.dart';
 class FirstComponent extends PolymerElement {
 
   @property
-  String component;
+  String property11;
+
+  @property
+  String property12;
+
+  @property
+  String property13;
 
   ready() {
-    component = 'component1';
-    set('component', component);
-    set('first-component', component);
-    print('component is $component');
+    property11 = 'component1 property1';
+    set('property11', property11);
+    property13 = 'component1 property3 pass to component2 property3';
+    set('property13', property13);
+    print('property11 is $property11');
+    print('property12 is $property12');
+    print('property13 is $property13');
     print('firstComponent ready');
   }
 
   attached() {
-    print('component is $component');
+    print('property11 is $property11');
+    print('property12 is $property12');
+    print('property13 is $property13');
     print('firstComponent attached');
   }
 
   FirstComponent.created(): super.created(){
-    print('component is $component');
+    print('property11 is $property11');
+    print('property12 is $property12');
+    print('property13 is $property13');
     print('firstComponent created');
   }
 

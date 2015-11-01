@@ -8,27 +8,36 @@ import 'package:web_components/web_components.dart';
 class SecondComponent extends PolymerElement {
 
   @property
-  String secondComponent;
-  @property
-  String firstComponent;
+  String firstProperty;
 
-  ready(){
-    secondComponent = 'component2';
-    set('secondComponent', secondComponent);
-    print('secondComponent is $secondComponent');
-    print('firstComponent is $firstComponent');
+  @Property(notify: true)
+  String secondProperty;
+
+  @Property(reflectToAttribute: true)
+  String thirdProperty;
+
+  ready() {
+    firstProperty = 'component2 property1';
+    set('firstProperty', firstProperty);
+    secondProperty = 'component2 property2 pass to component1 property2';
+    set('secondProperty', secondProperty);
+    print('firstProperty is $firstProperty');
+    print('secondProperty is $secondProperty');
+    print('thirdProperty is $thirdProperty');
     print('secondComponent ready');
   }
 
-  attached(){
-    print('secondComponent is $secondComponent');
-    print('firstComponent is $firstComponent');
+  attached() {
+    print('firstProperty is $firstProperty');
+    print('secondProperty is $secondProperty');
+    print('thirdProperty is $thirdProperty');
     print('secondComponent attached');
   }
 
   SecondComponent.created(): super.created(){
-    print('secondComponent is $secondComponent');
-    print('firstComponent is $firstComponent');
+    print('firstProperty is $firstProperty');
+    print('secondProperty is $secondProperty');
+    print('thirdProperty is $thirdProperty');
     print('secondComponent created');
   }
 
