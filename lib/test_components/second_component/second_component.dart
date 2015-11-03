@@ -17,10 +17,8 @@ class SecondComponent extends PolymerElement {
   String thirdProperty;
 
   ready() {
-    firstProperty = 'component2 property1';
-    set('firstProperty', firstProperty);
-    secondProperty = 'component2 property2 pass to component1 property2';
-    set('secondProperty', secondProperty);
+    set('firstProperty', 'component2 property1');
+    set('secondProperty', 'component2 property2 pass to component1 property2');
     print('firstProperty is $firstProperty');
     print('secondProperty is $secondProperty');
     print('thirdProperty is $thirdProperty');

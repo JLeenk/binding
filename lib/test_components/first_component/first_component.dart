@@ -4,6 +4,8 @@ library binding.lib.test_components.first_component.first_component;
 import 'package:polymer/polymer.dart';
 import 'package:web_components/web_components.dart';
 
+import 'package:binding/test_components/second_component/second_component.dart';
+
 @PolymerRegister('first-component')
 class FirstComponent extends PolymerElement {
 
@@ -17,10 +19,8 @@ class FirstComponent extends PolymerElement {
   String property13;
 
   ready() {
-    property11 = 'component1 property1';
-    set('property11', property11);
-    property13 = 'component1 property3 pass to component2 property3';
-    set('property13', property13);
+    set('property11', 'component1 property1');
+    set('property13', 'component1 property3 pass to component2 property3');
     print('property11 is $property11');
     print('property12 is $property12');
     print('property13 is $property13');
